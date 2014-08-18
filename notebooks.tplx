@@ -1,0 +1,18 @@
+((*- extends 'article.tplx' -*))
+
+((* block author *))
+\author{Andreas Sorge}
+((* endblock author *))
+
+((* block bibliography *))
+\bibliographystyle{unsrt}
+\bibliography{notebooks}
+((* endblock bibliography *))
+
+((*- block input_group -*))
+    ((*- if cell.metadata.input_collapsed -*))
+    ((*- else -*))
+        ((( super() )))
+    ((*- endif -*))
+((*- endblock input_group -*))
+  
