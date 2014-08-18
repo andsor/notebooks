@@ -1,6 +1,6 @@
-notebook_markdown = $(filter-out README.md,$(wildcard *.md))
-notebooks_md = $(notebook_markdown:.md=.ipynb)
-notebooks_ipynb = $(wildcard *.ipynb)
+notebook_markdown = $(filter-out README.md,$(wildcard src/*.md))
+notebooks_md = $(addsuffix .ipynb,$(addprefix notebooks/,$(basename $(notdir $(notebook_markdown)))))
+notebooks_ipynb = $(wildcard notebooks/*.ipynb)
 notebooks = $(notebooks_md) $(notebooks_ipynb)
 notebook_tex_exports = $(notebooks:.ipynb=.tex)
 notebook_pdf_exports = $(notebooks:.ipynb=.pdf)
@@ -13,13 +13,14 @@ citeulike_group = 19049
 all: $(notebook_pdf_exports)
 all-ipynb: $(notebooks_md)
 
-%.ipynb : %.md
+notebooks/%.ipynb : src/%.md
 	notedown "$<" > "$@"
 	runipy -o "$@"
 
-%.pdf : %.ipynb $(bibfile)
+notebooks/%.pdf : notebooks/%.ipynb $(bibfile)
+	(cd notebooks; \
 	ipython nbconvert --to latex --template notebooks.tplx \
-	--post PDF "$<"
+	--post PDF "$(notdir $<)" )
 
 .PHONY: bib clean clean-all
 
