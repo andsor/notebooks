@@ -27,7 +27,7 @@ except:
 mpl.rcParams.update({
     'figure.dpi'        : 300,
     'savefig.dpi'       : 300,
-    'grid.color'        : mpl.rcParams['axes.edgecolor'],
+    'grid.color'        : mpl.rcParams['xtick.color'],
 })
 
 # load ipython cython magic
