@@ -1,4 +1,4 @@
-notebook_markdown = $(filter-out README.md,$(wildcard src/*.md))
+notebook_markdown = $(filter-out src/README.md,$(wildcard src/*.md))
 notebooks_md = $(addsuffix .ipynb,$(addprefix notebooks/,$(basename $(notdir $(notebook_markdown)))))
 notebooks_ipynb = $(wildcard notebooks/*.ipynb)
 notebooks = $(notebooks_md) $(notebooks_ipynb)
