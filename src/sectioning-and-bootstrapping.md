@@ -1,8 +1,8 @@
 # Sectioning and bootstrapping
 
 The following presentation is based on the excellent textbook by Asmussen and
-Glynn <cite data-cite="Asmussen2007Stochastic">(Asmussen & Glynn,
-2007)</cite>.
+Glynn <cite data-cite="Asmussen2007Stochastic">([Asmussen & Glynn,
+2007])</cite>.
 
 Given a random element $X$, its distribution $F$, and some real-valued
 functional $\psi$, we would like to estimate $\psi(F)$ and its $1-\alpha$
@@ -29,7 +29,7 @@ $$
 $$
 
 As $R \to \infty$, we have $\psi(\hat{F}_R) \to \psi(F)$ almost surely <cite
-data-cite="Asmussen2007Stochastic">(Asmussen & Glynn, 2007)</cite>.
+data-cite="Asmussen2007Stochastic">([Asmussen & Glynn, 2007])</cite>.
 Furthermore, we have a central limit theorem such that $\psi(\hat{F}_R)$ is
 distributed as $\psi(F) + Y$, where $Y \sim \mathcal{N}(0, \sigma/\sqrt{R})$.
 
@@ -88,8 +88,8 @@ P(\psi(F) \in (\psi(\hat{F}_R) - z_2, \psi(\hat{F}_R) - z_1)) = 1 - \alpha.
 $$
 
 Assuming that $\hat{F}_R \approx F$, the empirical quantiles $z_1^*, z_2^*$
-satisfy <cite data-cite="Asmussen2007Stochastic">(Asmussen & Glynn,
-2007)</cite>
+satisfy <cite data-cite="Asmussen2007Stochastic">([Asmussen & Glynn,
+2007])</cite>
 
 $$
 P_{\hat{F}_R}(\psi(\hat{F}_R) - \psi(F) < z_1^*) =
@@ -118,9 +118,12 @@ $$
 
 These quantiles $z_1^*, z_2^*$ approximate the quantiles $z_1, z_2$ of the true
 distribution $F$, and hence, yield the approximate $1 - \alpha$ confidence
-interval <cite data-cite="Asmussen2007Stochastic">(Asmussen & Glynn,
-2007)</cite>
+interval <cite data-cite="Asmussen2007Stochastic">([Asmussen & Glynn,
+2007])</cite>
 
 $$
 \left( \psi(\hat{F}_R) - z_2^*, \psi(\hat{F}_R) - z_1^* \right).
 $$
+
+[Asmussen & Glynn, 2007]: http://dx.doi.org/10.1007/978-0-387-69033-9
+
