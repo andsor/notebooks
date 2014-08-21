@@ -6,7 +6,7 @@
 
 ((* block bibliography *))
 \bibliographystyle{unsrt}
-\bibliography{notebooks}
+\bibliography{../notebooks}
 ((* endblock bibliography *))
 
 ((*- block input_group -*))

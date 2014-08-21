@@ -25,6 +25,8 @@ notebooks, and generate PDFs.
 
 Run ``make clean-all`` to clean all but the ``.md`` and ``.ipynb`` sources.
 
+Run ``make all-auto`` to run ``make all`` automatically every second.
+
 ## Workflow
 
 ### Writing a new notebook in markdown

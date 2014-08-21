@@ -10,6 +10,9 @@ bibfile = notebooks.bib
 citeulike_cookies = citeulike-cookies.wget
 citeulike_group = 19049
 
+all-auto:
+	while sleep 1; do make all; done
+
 all: $(notebook_pdf_exports)
 all-ipynb: $(notebooks_md)
 
