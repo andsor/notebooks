@@ -27,6 +27,29 @@ Run ``make clean-all`` to clean all but the ``.md`` and ``.ipynb`` sources.
 
 Run ``make all-auto`` to run ``make all`` automatically every second.
 
+## Citations
+
+See the [Tutorial on Managing citations in the IPython
+Notebook](http://nbviewer.ipython.org/github/ipython/nbconvert-examples/blob/master/citations/Tutorial.ipynb)
+for inserting citations into a notebook.
+
+### Bibliography
+
+A [CiteULike group](http://www.citeulike.org/group/19049) organizes all
+references. Run ``make bib`` to download the [BibTeX file] directly.
+
+**NOTE:** You need to update the BibTeX file explicitly. It will not update
+when running just ``make``.
+
+[BibTeX file]: notebooks.bib
+
+### Bibliography style
+
+The bibliography style is [REVTeX]. The [nbconvert template](notebooks.tplx)
+implements it according to http://tex.stackexchange.com/a/91655/30438
+
+[REVTeX]: http://journals.aps.org/revtex/
+
 ## Workflow
 
 ### Writing a new notebook in markdown
