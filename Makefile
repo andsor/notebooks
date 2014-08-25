@@ -27,7 +27,7 @@ notebooks/%.tplx : notebooks/%.ipynb notebooks.tplx
 	echo "((* endblock title *))" >> "$(basename $<).tplx"
 
 notebooks/%.out.ipynb : notebooks/%.ipynb
-	sed -e '0,/#/{s/"# .*"/""/}' $< > $@
+	sed -e '0,/#/{s/"# .*"/"\\n"/}' $< > $@
 
 notebooks/%.pdf : notebooks/%.out.ipynb $(bibfile) notebooks.tplx notebooks/%.tplx
 	(cd notebooks; \
