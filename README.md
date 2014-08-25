@@ -18,6 +18,9 @@ IPython notebooks
 Either put a markdown file (``.md``) in ``src/``, or a notebook file
 (``.ipynb``) in ``notebooks/``.
 
+Note that the first heading will get transformed into the title during
+LaTeX/PDF export.
+
 ## Build
 
 Run ``make all`` to convert markdown files into notebook files and run all

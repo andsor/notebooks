@@ -20,10 +20,19 @@ notebooks/%.ipynb : src/%.md
 	notedown "$<" > "$@"
 	runipy -o "$@"
 
-notebooks/%.pdf : notebooks/%.ipynb $(bibfile) notebooks.tplx
+notebooks/%.tplx : notebooks/%.ipynb notebooks.tplx
+	cp notebooks.tplx "$(basename $<).tplx"
+	echo "((* block title *))" >> "$(basename $<).tplx"
+	echo "\\\title{"`grep -Po --max-count=1 '(?<=# )[^"]*' $<`"}" >> "$(basename $<).tplx"
+	echo "((* endblock title *))" >> "$(basename $<).tplx"
+
+notebooks/%.out.ipynb : notebooks/%.ipynb
+	sed -e '0,/#/{s/"# .*"/""/}' $< > $@
+
+notebooks/%.pdf : notebooks/%.out.ipynb $(bibfile) notebooks.tplx notebooks/%.tplx
 	(cd notebooks; \
-	ipython nbconvert --to latex --template notebooks.tplx \
-	--post PDF "$(notdir $<)" )
+	ipython nbconvert --to latex --template "$(notdir $(@:.pdf=.tplx))" \
+	--post PDF --output "$(notdir $(basename $@))" "$(notdir $<)" )
 
 .PHONY: bib clean clean-all
 
