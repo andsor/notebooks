@@ -20,7 +20,7 @@ notebooks/%.ipynb : src/%.md
 	notedown "$<" > "$@"
 	runipy -o "$@"
 
-notebooks/%.pdf : notebooks/%.ipynb $(bibfile)
+notebooks/%.pdf : notebooks/%.ipynb $(bibfile) notebooks.tplx
 	(cd notebooks; \
 	ipython nbconvert --to latex --template notebooks.tplx \
 	--post PDF "$(notdir $<)" )

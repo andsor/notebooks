@@ -5,7 +5,7 @@
 ((* endblock author *))
 
 ((* block bibliography *))
-\bibliographystyle{unsrt}
+	\bibliographystyle{apsrev4-1}
 \bibliography{../notebooks}
 ((* endblock bibliography *))
 
@@ -15,4 +15,13 @@
         ((( super() )))
     ((*- endif -*))
 ((*- endblock input_group -*))
-  
+
+
+# set up revtex
+# http://tex.stackexchange.com/a/15691/30438
+((* block packages *))  
+((( super() )))
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{doi}
+((* endblock packages *))  
+
