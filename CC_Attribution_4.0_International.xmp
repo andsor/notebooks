@@ -7,7 +7,7 @@
     </rdf:Description>
     <rdf:Description rdf:about=''
 		     xmlns:xapRights='http://ns.adobe.com/xap/1.0/rights/'>
-      <xapRights:WebStatement rdf:resource='http://github.com/andsor/notebooks'/>
+      <xapRights:WebStatement rdf:resource='http://notebooks.asorge.de'/>
     </rdf:Description>
     <rdf:Description rdf:about=''
 		     xmlns:xapRights='http://ns.adobe.com/xap/1.0/rights/'
