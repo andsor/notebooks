@@ -1,7 +1,3 @@
-> *[This work](http://notebooks.asorge.de) is licensed under a [Creative
-Commons Attribution 4.0 International
-License](http://creativecommons.org/licenses/by/4.0/).*
-
 # Template
 The first heading is moved to the title in PDF export.
 
@@ -39,4 +35,8 @@ mpl.rcParams.update({
 # load ipython cython magic
 %load_ext cythonmagic
 ```
+
+> *[This work](http://notebooks.asorge.de) is licensed under a [Creative
+Commons Attribution 4.0 International
+License](http://creativecommons.org/licenses/by/4.0/).*
 

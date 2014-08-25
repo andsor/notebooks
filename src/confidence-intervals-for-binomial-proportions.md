@@ -1,7 +1,3 @@
-> *[This work](http://notebooks.asorge.de) is licensed under a [Creative
-Commons Attribution 4.0 International
-License](http://creativecommons.org/licenses/by/4.0/).*
-
 # Confidence Intervals for Binomial Proportions
 
 ```python
@@ -105,3 +101,7 @@ $$
 [Wasserman, 2004]: http://dx.doi.org/10.1007/978-0-387-21736-9
 
 [Cameron, 2011]: http://dx.doi.org/10.1071/as10046
+
+> *[This work](http://notebooks.asorge.de) is licensed under a [Creative
+Commons Attribution 4.0 International
+License](http://creativecommons.org/licenses/by/4.0/).*
