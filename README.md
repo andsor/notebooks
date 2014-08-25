@@ -46,7 +46,7 @@ when running just ``make``.
 ### Bibliography style
 
 The bibliography style is [REVTeX]. The [nbconvert template](notebooks.tplx)
-implements it according to http://tex.stackexchange.com/a/91655/30438
+implements it according to http://tex.stackexchange.com/a/15691/30438
 
 [REVTeX]: http://journals.aps.org/revtex/
 
