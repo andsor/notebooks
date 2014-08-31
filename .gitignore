@@ -4,3 +4,4 @@
 *.swp
 .virtualenv
 notebooks/CC_Attribution_4.0_International.xmpi
+README.local.md
