@@ -29,6 +29,17 @@ finite-size scaling ansatz.
 In the following, we present a measure by Houdayer & Hartmann 
 <cite data-cite="Houdayer2004Lowtemperature">([Houdayer & Hartmann, 2004])</cite>
 for the quality of the data collapse.
+Melchert <cite data-cite="Melchert2009AutoScalepy">([Melchert, 2009])</cite>
+refers to some alternative measures, for example <cite
+data-cite="Bhattacharjee2001Measure">([Bhattacharjee & Seno, 2001])</cite>,
+<cite data-cite="Wenzel2008Percolation">([Wenzel et al., 2008])</cite>, and
+to some applications of these measures in the literature.
+
+[Wenzel et al., 2008]: http://dx.doi.org/10.1016/j.nuclphysb.2007.10.024
+
+[Bhattacharjee & Seno, 2001]: http://dx.doi.org/10.1088/0305-4470/34/33/302
+
+[Melchert, 2009]: http://arxiv.org/abs/0910.5403
 
 [Houdayer & Hartmann, 2004]: http://dx.doi.org/10.1103/physrevb.70.014418 
 
@@ -66,7 +77,7 @@ The scaled data are
 \begin{align}
 y_{ij} & := L_i^{-\zeta/\nu} a_{L_i, \varrho_j} \\
 dy_{ij} & := L_i^{-\zeta/\nu} da_{L_i, \varrho_j} \\
-x_{ij}  & := L_i^{1/\nu}(\varrho - \varrho_c).
+x_{ij}  & := L_i^{1/\nu}(\varrho_j - \varrho_c).
 \end{align}
 
 The sum in the quality function $S$ only involves terms for which the estimated
