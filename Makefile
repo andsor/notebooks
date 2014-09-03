@@ -29,7 +29,7 @@ notebooks/%.tplx : notebooks/%.ipynb notebooks.tplx
 notebooks/%.out.ipynb : notebooks/%.ipynb
 	sed -e '0,/#/{s/"# .*"/"\\n"/}' $< > $@
 
-notebooks/%.pdf : notebooks/%.out.ipynb $(bibfile) notebooks.tplx notebooks/%.tplx
+notebooks/%.pdf : notebooks/%.out.ipynb notebooks.tplx notebooks/%.tplx
 	(cd notebooks; \
 	ipython nbconvert --to latex --template "$(notdir $(@:.pdf=.tplx))" \
 	--post PDF --output "$(notdir $(basename $@))" "$(notdir $<)" )
